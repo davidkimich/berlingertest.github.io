@@ -1,0 +1,1517 @@
+
+
+
+lice compiler
+.html{
+  scroll-behavior: smooth;
+}
+.all{
+  background-color:#111111; /*181818*/
+}
+*{
+  margin: 0;/*to merge better idk*/
+  padding: 0;
+}
+.header{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:/*linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),*/url(Backgroundmain.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*
+ul{
+  background-color: #e6ba38;
+}
+*/
+
+nav img{/*fixing logo size*/
+  width:220px;
+  height: auto;
+}
+.navigation{
+  background-color: #181818;
+
+}
+.navigation{
+  flex: 1;/*This will make the navigations ocupy the whole row*/
+  text-align: center;/*this will place all navigations on the right sid of the screen*/
+
+}
+.navigation ul li {/*cuz they are in ul and li*/
+  list-style: none;/*how they are listed*/
+  display: inline-block;/*place them all in a single line*/
+  padding: 12px 16px;/*adds some space between navigation tabs*/
+  position: relative;
+
+}
+.navigation ul li a{/*added a to include text*/
+color: #fff0f5;
+text-decoration: none;/*to remove the link underline*/
+font-size: 25px;
+
+}
+/*Creating the hover effect*/
+.navigation ul li a::after{/*we put after because this line of code will have what we want the outcome of the hover to be*/
+
+  content: '';
+  width: 0%;/*how long we want the lines under the navigations , here we put 0 because we want them to show only when we hover*/
+  height: 3px;/*how thicc are the lines*/
+  background: red;/*line color*/
+  display: block;/*always pace this to display it*/
+  margin: auto;/*to properly take length of navigation words and not make all lines equal*/
+  transition: 0.5s;/*how long does the animation play*/
+
+}
+
+.navigation ul li a:hover::after{/*hhere we put what will happen when we hover*/
+width: 100%;/*up there it was 0 noow we are transforming it to 100% under the words*/
+}
+.textbox{/*we are changind the position of the center text of header*/
+  width: 100%;
+  color: white;
+  position: absolute;/*ajusting*/
+  top: 35%;/* make space of 50% available at top */
+  bottom: 50%;/* make space of 50% available at bottom */
+  text-align: center;/*to put all the text in the center of the page*/
+}
+.textbox h1{/*Change h1*/
+  font-size: 40px; /*make it bigger*/
+}
+.textbox p{/*Change p*/
+  margin: 10px 0 40px;/* changing text margins height width*/
+  font-size: 20px;/*make it bigger/smaller*/
+  color: white;
+}
+.herobutton{/*this is the button  section*/
+  display: inline-block;/*initiates square formation*/
+  text-decoration: none;/*removes the underline of link*/
+  color: white;
+  border: 2px solid white;/*the border of the square*/
+  padding: 24px 44px;/*button size*/
+  font-size: 20px;/*text size*/
+  background: transparent;
+  position: relative;
+  cursor: pointer;/*makes pointer at hover*/
+
+  transition: 0.5s;
+}
+
+.herobutton:hover{/*this will create the hover animation*/
+border: 2px solid black;/*the new border of the square*/
+background: #e74c3c;/*the new background of the square which was none*/
+color: white;
+}
+.textboxmobile{
+  visibility: hidden;
+}
+
+/**********************************
+@media(max-width: 700px){/*for all devices ;ess than 700 pixels in width, these parameters apply*/
+    /*  .textbox h1{
+        font-size: 20px;/*we reduced size of h1 for smaller screens */
+    /*  }
+      .navigation ul li{
+        display: block;/*this is going to be the tab that shows navigation for small screen devices
+        */
+    /*  }
+      .navigation{
+        position: absolute;/*adjusts position of links*/
+      /*  background: red;/*background of the tab*/
+      /*  height: 75vh;/*height of tab which is same as height of header*/
+      /*  width: 200px;/*thiccness of the tab*/
+    /*    top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+      }
+      **********************************************/
+
+/*------------------- this is additional video section uncomment if needed*/
+.introvideo {
+
+  width: 80%;/*want it on 80% of the screen*/
+  margin:auto;/*moves it as it sees fit*/
+  text-align: center;/*puts it in the center*/
+
+
+
+  }
+  .intvid{
+
+    display: block;
+    margin-top: 50px;
+    border-radius: 50px;
+  }
+
+
+/*----------------------------------ALL TITLES AND SUBTITLES SETUP------------------------*/
+.aboutus{
+  width: 80%;/* makes it bigger*/
+  margin:auto;/*moves it as it sees fit*/
+  text-align: center;/*puts it in the center*/
+  padding-top: 100px;/*moves it down by 400px*/
+}
+h1{/*IMPORTANT this changes the status of all h1 in the web pageS*/
+  font-size: 35px;/*changes title size*/
+  font-weight: 600;/*this changes writing type style idk*/
+
+
+}
+p{/*IMPORTANT this changes the status of all p in the web pageS*/
+color: gray;/*changes desc color*/
+font-size: 20px;/*changes desc size*/
+font-weight: 300;/*this changes writing type style idk*/
+line-height: 22px;
+padding: 10px;
+}
+
+
+/*-----------------------------------About us section-------------------------*/
+.row{/*this is the general about us class*/
+
+  margin-top: 5%;/*spacing from top*/
+  display: flex;/*puts all paragraphs next to eachother instead of on top of eachother */
+  justify-content: space-between;
+}
+.aboutcol{/*here we have everything written in about us we want to frame them*/
+flex-basis: 31%;/*aligns them 31% of each other or from border idk*/
+background: #fff3f3;/*changing the background color of the writing paragraph to color code fff3f3*/
+border-radius: 10px;/*makes borders somewhat round*/
+margin-bottom: 5%;/*spacing form bottom*/
+padding: 20px 12px;/*spacing from eachother in a better way or from border idk*/
+box-sizing: border-box;/*more sizing idk*/
+transition: 0.5s/*how long the animation takes*/
+}
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;/*title spacing*/
+}
+.aboutcol:hover{/*this is for animations the desired shadow effect that we want */
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);/*shadow effect*/
+}
+
+
+/*---------------------------------------- PDF FILES services SECTION ---------------------------*/
+.pdf{
+  width: 80%;/*changes size of text*/
+  margin: auto;
+  text-align: center;/*puts all text in center*/
+  padding-top: 100px;/*space from top*/
+}
+.row{/*this is all 3 pictures not just 1 if we write in pdfcol */
+  margin-left: 5%;/*spacing from left*/
+  margin-right: 5%;/*spacing form right*/
+
+
+}
+
+.pdfcol{
+  flex-basis: 32%;/*aligns them*/
+  border-radius: 10px;/*borders will be rounded*/
+  margin-bottom: 100px;/*space form bottom*/
+  position: relative;/*position fixer*/
+  overflow: hidden;/*everything that goes out of the borders dont show*/
+
+
+}
+.pdfcol img{
+  width: 100%;/*changes size*/
+  display: block;
+}
+.layer{
+  background: transparent;/*removes color made in the next entity layer:hover*/
+  height: 100%;/*height of fade coloring placement and text*/
+  width: 100%;/*height of fade coloring and text*/
+  position: absolute;/*somehow puts it in the image*/
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover{/*this is the outcome of the animation*/
+  background: rgba(226,0,0,0.7);/*creates fade coloring that will appear when we hover*/
+
+}
+/*//////////////////////////H3//////////////////////*/
+.layer h3{/*changing all h3 attributes in layer */
+  color: white;/*change h3 color*/
+  width: 100%;/*change h3 position*/
+  font-weight: 500;/*changes h3 appearence font*/
+  font-size: 26px;/*changes size of writing*/
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);/*makes its initial position at the bottom*/
+  position: absolute;/*fixes position*/
+  transition: 0.5s;/*transition time*/
+  opacity: 0;/*removes text when not hovering */
+}
+.layer:hover h3{/*what we want to happen to h3 when hovering*/
+  /*color: black;/*changes text color from white to black*/
+  bottom: 40%;/*make it go up 40%*/
+  opacity: 1;/*It shows text after hover*/
+}
+/*///////////////////////////////////////////////////////////////////////*/
+/*////////////////////////this section is for services explenation/////////////////*/
+.aboutservices{/*to allign and change title and subtitlesettings*/
+  width: 80%;/*how much of the page it takes , here it takes 80% width of the page*/
+  margin: auto;/*text alignment*/
+  text-align: center;/*text go to left*/
+  padding-top: 5%;/*spacing from top*/
+}
+.aboutservicescol{/*all images */
+  flex-basis: 31%;/*idk search what it does*/
+  border-radius: 10px;/*round borders*/
+  margin-bottom: 5%;/*space at the bottom*/
+  text-align: left;/*the title and description are alligned at left*/
+}
+.aboutservicescol img{
+  width: 100%;/*recisement*/
+  border-radius: 10px;/*rounds borders*/
+}
+.aboutservicescol p{/*changing attributes of paragraphs */
+  padding: 0;
+}
+.aboutservicescol h3{/*changing attributes of titles */
+  margin-top: 16px;/*spaces 16px form top*/
+  margin-bottom: 16px;/*spaces 16px form top*/
+  text-align: left;/*text is at left*/
+}
+/*///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////CONTACT US//////////////////////////////////////////*/
+.contactus{/*allignment of background and text to center*/
+  margin-left: 100px auto;/*100 px form bottom and auto from left and right(meaning made to fit text from left and right)*/
+  width: 100%;/*sizing*/
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(b.jpg);; /*like header of the web page , we will have a background image that is faded by linear-gradient*/
+  background-position: center;/*this will place it all at the center*/
+  background-size: cover;
+  /*border-radius: 50px;/*rounds border of the background*/
+  text-align: center;/*puts all text at center*/
+  padding: 100px 0;/*100 px form top and bottom*/
+  margin: auto;/*centers the background*/
+  margin-top: 3%;
+  /*the next two lines make the image not move with the page*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.contactus h1{/*changing attributes of title h1*/
+  color: white;
+  margin-bottom: 50px;/*space form bottom*/
+  padding:0;
+}
+.icons{
+
+  text-decoration: none;/*removes the link decoration which makes it blue*/
+  color: inherit;
+  color: white;
+  margin-top: 30px;/*spaces them from top*/
+  font-size: 40px;/*makes them bigger*/
+  padding: 40px 20px;/* adds space between them*/
+
+}
+/*///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////footer//////////////////////////////////////////*/
+.footer{
+  width: 100%;/*how much of the page it takes , here it takes the 100% width of the page*/
+  text-align: center;/*all text goes to the center*/
+  padding: 30px 0;
+
+}
+
+ .footer h4{
+
+   margin-top: 25px;
+   margin-bottom: 20px;
+   font-size: 25px;
+   font-weight: 600;
+   color: #606060;
+
+
+}
+ .madeby p{
+   font-size: 12px;
+
+ }
+ .notheader{
+   /*the height of the background is 75% of screen*/
+
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-color: #F5F5F5;
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ .notheader2{
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-image: url(2322.png);
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ .notheader3{
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-image: url(2323.png);
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ .notheader4{
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-image: url(2324.png);
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ .notheader5{
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-image: url(2323.png);
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ .notheader6{
+   width: 80%;/*want it on 80% of the screen*/
+   margin:auto;/*moves it as it sees fit*/
+   text-align: center;/*puts it in the center*/
+   background-image: url(2324.png);
+   background-position: center;/*image in center*/
+   background-size: cover;/*image fits and covers all available space*/
+   position: relative;/*more ajusting*/
+ }
+ /*////////////second web page//////////////////////*/
+  /*////////////second web page//////////////////////*/
+   /*////////////second web page//////////////////////*/
+    /*//////////// about us//////////////////////*/
+ .header2{
+   min-height: 100vh;/*the height of the background is 75% of screen*/
+width:100%;/*width is 100% of the screen*/
+background-image:/*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),*/url(Backgroundaboutus.png);/*toning down image and source*/
+background-position: center;/*image in center*/
+background-size: cover;/*image fits and covers all available space*/
+position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+ }
+ .herobutton2{/*this is the button  section*/
+   display: inline-block;/*initiates square formation*/
+   text-decoration: none;/*removes the underline of link*/
+   color: black;
+   border: 2px solid black;/*the border of the square*/
+   padding: 24px 44px;/*button size*/
+   font-size: 14px;/*text size*/
+   background: transparent;
+   position: relative;
+   cursor: pointer;/*makes pointer at hover*/
+
+   transition: 0.5s;
+ }
+ .herobutton2:hover{/*this will create the hover animation*/
+ border: 2px solid red;/*the new border of the square*/
+ background: red;/*the new background of the square which was none*/
+ }
+ /*//////////////////////////////about us second section/////////////////////////////////////////*/
+ .Aboutuscontent{
+   width: 100%;/*makes everything that goes into it on the 80% of the page*/
+   margin: auto;/*text goes to center*/
+   padding-top: 80px;
+   padding-bottom: 50px;
+ }
+ .aboutccol{
+
+   flex-basis: 48%;
+   padding: 30px 2px;/*padding between text and picture we take them as 2 columns which is why we made them into divs*/
+ }
+ .aboutccol img{
+   width: 10%;
+
+
+ }
+ .aboutccol h1{
+   line-height: 60px;
+ }
+ #h1000{
+   text-align: left;
+  color: white;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  line-height: 80px;
+ }
+ #h1000n2{
+   text-align: center;
+  color: white;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  line-height: 80px;
+ }
+ #h1001{
+   text-align: right;
+  color: white;
+  margin-top: 5%;
+line-height: 80px;
+  margin-bottom: 5%;
+  margin-right: 5%;
+ }
+ #h1002{
+    text-align: left;
+   color: white;
+
+ }
+
+ #h1003{
+   text-align: right;
+  color: white;
+ }
+ #j10222{
+   text-align: left;
+   margin-top: -10%
+ }
+ #j10222 h1{
+   line-height: 45px;
+ }
+ #j10222 p{
+   line-height: 35px;
+ }
+ #j224g{
+   margin-top: -8%;
+ }
+#j225g {
+margin-top: -18%;
+}
+
+ .aboutccol title{
+   padding-top: 0;
+ }
+.aboutccol p{
+  padding: 15px 0 25;
+}
+.auh1{
+  padding-top: 5%;
+}
+.aboutcol p{
+  line-height: normal;
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////*/
+/*///////////////////////contact us web page////////////////////////////////////////////////*/
+
+.header3{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+width:100%;/*width is 100% of the screen*/
+background-image:/*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),*/url(Backgroundcontactus.png);/*toning down image and source*/
+background-position: center;/*image in center*/
+background-size: cover;/*image fits and covers all available space*/
+position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.location{
+  padding-top: 50px;
+}
+
+
+  .contactcontent{
+    width: 80%;/*will take 80% of the page*/
+    margin: auto;/*exact function of a margin is the creation of space around object in an html file*/
+
+  }
+  .contactcol{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+  }
+  .contactcol div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contactcol div .fa-solid{/*changing parameters of icons*/
+  font-size: 28px;
+  color: #f44336;
+  margin: 10px ;
+  margin-right: 30px;
+}
+.contactcol div p{
+  font-size: 14px;
+  padding: 0;
+}
+.contactcol div{
+  font-size: 20px;
+  margin-bottom: 55px;
+  color: #555;
+}
+/*here we will be making the input layout parameters*/
+.contactcol input, .contactcol textarea{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #CCC;
+}
+.contactcol button{
+ border: 1px solid #CCC;
+ font-size: 10px;/*text size*/
+
+}
+.followon i{
+  text-align: center;
+  padding: 14px;
+}
+.followon{
+  text-align: center;
+  margin: auto;
+  width: 48%;
+}
+/*product web header///////////////////////////*/
+.header4{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+width:100%;/*width is 100% of the screen*/
+background-image:/*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),*/url(Backgroundservices.png);/*toning down image and source*/
+background-position: center;/*image in center*/
+background-size: cover;/*image fits and covers all available space*/
+position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+
+
+}
+.header6{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+width:100%;/*width is 100% of the screen*/
+background-image:/*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),*/url(Backgroundprojects.png);/*toning down image and source*/
+background-position: center;/*image in center*/
+background-size: cover;/*image fits and covers all available space*/
+position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+
+
+}
+
+
+/*ANIMATIONS/////////////////////*/
+.dividor{
+  width: 100%;
+  background-color: #111111;
+  height: 50px;
+  position: relative;
+
+}
+#slider{
+  overflow: hidden;
+
+}
+#slider figure{
+  position: relative;
+  width: 600%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+#slider figure img{
+  width: 16.6666666666666666666666666666666666%;
+  float: left;
+}
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  15%{
+    left:0;
+  }
+  20%{
+    left:-100%;
+  }
+  35%{
+    left:-100%;
+  }
+  40%{
+    left:-200%;
+  }
+  55%{
+    left:-200%;
+  }
+  60%{
+    left:-300%;
+  }
+  75%{
+    left:-300%;
+  }
+  80%{
+    left:-400%;
+  }
+  95%{
+    left:-400%;
+  }
+  99.5%{
+    left:-500%;
+  }
+  100%{
+    left:-500%;
+  }
+
+
+
+}
+.elevatoricon1{
+
+  position: relative;
+  margin: 0;
+  left: 60%;
+  top: -55px;
+  animation: 2s slid ;
+  width: 10px;
+
+  height: 10px;
+  display: block;
+  position: relative;
+
+}
+.elevatoricon2{
+
+  position: relative;
+  margin: 0;
+  left: 61%;
+  bottom: 50px;
+  animation: 2s slid2 ;
+  width: 10px;
+
+  height: 10px;
+  display: block;
+  position: relative;
+}
+.elevatoriconunderline{
+  position: relative;
+  margin: 0;
+  left: 40.5%;
+  animation: 1.5s slid0 ;
+  width: 288px;
+  background-color: white;
+  height: 3px;
+  display: block;
+  position: relative;
+
+}
+.elevatoriconunderline0{
+  position: relative;
+  margin: 0;
+  left: 39.5%;
+  animation: 1.5s slidz ;
+  width: 288px;
+  background-color: white;
+  height: 3px;
+  display: block;
+  position: relative;
+
+}
+@keyframes slid {
+  0%{
+    top: 500%;
+  }
+  100%{
+    top: -55px;
+}
+}
+@keyframes slid2 {
+  0%{
+    bottom: 500%;
+  }
+  100%{
+    bottom: 50px;
+}
+}
+@keyframes slid0 {
+  0%{
+    left: -500%;
+  }
+  100%{
+    left: 40.5%;
+}
+}
+@keyframes slidz {
+  0%{
+    left: -500%;
+  }
+  100%{
+    left: 39.5%;
+}
+}
+/*contact us animation*/
+.elevatoriconunderline2{
+  position: relative;
+  margin: 0;
+  left: 40.5%;
+  bottom: -75px;
+  animation: 2.75s slid00 ;
+  width: 288px;
+  background-color: white;
+  height: 3px;
+  display: block;
+  position: relative;
+
+}
+.elevatoriconunderline3{
+  position: relative;
+  margin: 0;
+  left: 42.5%;
+  bottom: 185%;
+  animation: 1.75s slid000 ;
+  width: 3px;
+  background-color: white;
+  height: 288px;
+  display: block;
+  position: relative;
+
+}
+.elevatoriconunderline4{
+  position: relative;
+  margin: 0;
+  left: 57%;
+  bottom: 385%;
+  animation: 3s slid0000 ;
+  width: 3px;
+  background-color: white;
+  height: 288px;
+  display: block;
+  position: relative;
+
+}
+@keyframes slid00 {
+  0%{
+    left: -500%;
+  }
+  100%{
+    left: 40.5%;
+}
+}
+@keyframes slid000 {
+  0%{
+    bottom: -3000%;
+  }
+  100%{
+    bottom: 185%;
+}
+}
+@keyframes slid0000 {
+  0%{
+    bottom: 3000%;
+  }
+  100%{
+    bottom: 385%;
+}
+}
+
+/*pre footer navigations
+.navigationsss ul li{
+  margin-left: 0px;
+  margin-top: 10px;
+  list-style:none;
+
+}
+.navigationsss ul li a{
+  color: white;
+  margin-left: 40px;
+  text-decoration: none;/*to remove the link underline*//*
+  font-size: 20px;
+}
+.navigationsss ul li a::after{/*we put after because this line of code will have what we want the outcome of the hover to be*/
+/*
+  content: '';
+  width: 0%;/*how long we want the lines under the navigations , here we put 0 because we want them to show only when we hover*/
+/*
+  height: 3px;/*how thicc are the lines*/
+  /*
+  background: red;/*line color*/
+  /*
+  display: block;/*always pace this to display it*/
+  /*
+  margin: auto;/*to properly take length of navigation words and not make all lines equal*/
+/*
+  transition: 0.5s;/*how long does the animation play*/
+  /*
+  margin-left: -2%
+}
+
+.navigationsss ul li a:hover::after{/*hhere we put what will happen when we hover*/
+/*
+
+
+width: 4100%;/*up there it was 0 noow we are transforming it to 100% under the words*/
+/*
+margin-left: 400%;
+
+}
+
+.navigationsss{
+  position: relative;
+  margin: 0;
+  left: 30%;
+  bottom: 160%;
+  animation: 10s slid0001 infinite ;
+  width: 3px;
+/*  background-color: white;*/
+/*
+  height: 170px;
+
+
+}
+@keyframes slid0001 {
+  0%{
+    bottom: 160%;
+  }
+  50%{
+    bottom: 200%;/*180*/
+    /*
+}
+  100%{
+    bottom: 160%;
+  }
+}
+.navigationsssx{
+  position: relative;
+  margin: 0;
+  left: 400%;
+  bottom: -80%;
+  animation: 10s slid0003 infinite ;
+  width: 3px;
+  background-color: black;
+  height: 150px;
+  display: block;
+  position: relative;
+}
+@keyframes slid0003 {
+  0%{
+    bottom: -80%;
+  }
+  50%{
+    bottom: -260%;
+}
+  100%{
+    bottom: -80%;
+  }
+}
+.navigationssss{
+  position: relative;
+  margin: 0;
+  left: 4500%;
+  bottom: 10%;
+  animation: 10s slid0002 infinite ;
+  width: 3px;
+  background-color: yellow;
+  height: 150px;
+  display: block;
+  position: relative;
+}
+@keyframes slid0002 {
+  0%{
+    bottom: 10%;
+  }
+  50%{
+    bottom: 190%;
+}
+  100%{
+    bottom: 10%;
+  }
+}
+.navigationsso{
+  position: relative;
+  margin: 0;
+  left: 2300%;
+  bottom: 120%;
+  animation: 10s slid0002 infinite ;
+  width: 3px;
+  background-color: red;
+  height: 100px;
+  display: block;
+  position: relative;
+}
+*/
+
+#h11{
+  text-align: center;
+  margin: auto;
+}
+#p11{
+  text-align: center;
+  margin: auto;
+}
+#hide{
+  visibility: hidden;
+}
+.newimage0{
+  min-height: 60vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(landscape1.jpg);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.newimage1{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-color:#181818;
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.newimage2{
+  min-height: 60vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures1.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: -10%;
+}
+.newimage3{
+  min-height: 80vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures11.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.newimage4{
+  min-height: 80vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures14.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.newimage5{
+  min-height: 80vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures15.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.newimage6{
+  min-height: 80vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures4.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.newimage77{
+  min-height: 80vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Captures13.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newimagex{
+  min-height: 60vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(menu1.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+align-items: center; /* aligns all the items vertically centered */
+justify-content: center; /* aligns all the items horizontally centered */
+}
+
+
+/*////////////////////////////////////*/
+.quote11{
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 25px;
+
+
+}
+.quote22 {
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 25px;
+}
+
+.quote11 h1 {
+
+  margin: 0;
+  animation: 8s quote1011 infinite ;
+  top: 100px;
+  position: relative;
+  display: inline-block;
+ text-decoration:none;
+
+
+}
+.quote22 h1 {
+
+  margin: 0;
+  animation: 8s quote1022 infinite ;
+  top:-100px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+  text-decoration: none;
+}
+a{
+  color: white;
+}
+
+@keyframes quote1011 {
+  0%{
+    top:100px;
+  }
+  50%{
+    top:-100px;
+  }
+  100%{
+    top:100px;
+  }
+}
+  @keyframes quote1022 {
+    0%{
+      top:-100px;
+    }
+    50%{
+      top:100px;
+    }
+    100%{
+      top:-100px;
+    }
+
+}
+/*////////////////////////////////*/
+#imgimg{
+  width: 200px;
+
+  height: auto;
+  display: block;
+  border-radius: 0;
+  text-align: center;
+  margin: auto;
+}
+.aboutservicescol{
+  margin-bottom: 6%;
+
+
+}
+
+}
+#h22{
+  color: white;
+}
+#p22{
+  color: white;
+}
+#logo2 img{
+  margin-top: -75px;
+}
+/*projects section header*/
+.header5{
+  min-height: 100vh;/*the height of the background is 75% of screen*/
+  width:100%;/*width is 100% of the screen*/
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(Backgroundcontactus.png);/*toning down image and source*/
+  background-position: center;/*image in center*/
+  background-size: cover;/*image fits and covers all available space*/
+  position: relative;/*more ajusting*/
+/*the next two lines make the image not move with the page*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/*Responsive elevator icon*/
+@media (max-width: 1400px) {
+.elevatoricon1{
+  left:62%;
+
+}
+.elevatoricon2{
+  left:63%;
+}
+}
+@media(max-width: 1250px){
+  .elevatoricon1{
+
+    position: relative;
+    margin: 0;
+    left: 65%;
+    top: -55px;
+    animation: 2s slid ;
+    width: 10px;
+
+    height: 10px;
+    display: block;
+    position: relative;
+
+  }
+  .elevatoricon2{
+
+    position: relative;
+    margin: 0;
+    left: 66%;
+    bottom: 50px;
+    animation: 2s slid2 ;
+    width: 10px;
+
+    height: 10px;
+    display: block;
+    position: relative;
+  }
+  @keyframes slid {
+    0%{
+      top: 500%;
+    }
+    100%{
+      top: -55px;
+  }
+  }
+  @keyframes slid2 {
+    0%{
+      bottom: 500%;
+    }
+    100%{
+      bottom: 50px;
+  }
+  }
+
+}
+/*responsive elevator icon*/
+/*some more adjusting*/
+@media(max-width: 1000px) {
+  /*last part before footer hidden*/
+.aboutservicescol{
+/*  visibility: hidden;*/
+}
+
+}
+#h10001{
+  letter-spacing: 10px;
+}
+#h1111111{
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+}
+#p1111111{
+  text-align: left;
+}
+
+
+
+
+/**bootstrap***/
+.Iam {
+  padding: 2em 5em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: white;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+
+.Iam .innerIam {
+  display: inline-block;
+  color: white;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 9s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 9s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+
+/*the left one*/
+.Iam2 {
+  padding: 2em 5em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: white;
+}
+.Iam2 p {
+  height: 50px;
+  float: right;
+  margin-right: 0.3em;
+
+}
+.Iam2 b {
+  float: right;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+
+.Iam2 .innerIam2 {
+  display: inline-block;
+  color: white;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 9s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 9s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+
+/* end tge left one */
+
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+
+
+/*Bootstrap2*/
+
+/*end of bootstrap/////////////////////////////////////////////*/
+.aboutccol{
+  margin-bottom: 15%;
+}
+#im1 img{
+  margin-right: 100%;
+}
+.aboutimage{
+  margin: auto;
+  text-align: center;
+
+}
+#ppt {
+  position: relative;/*position fixer*/
+  overflow: hidden;/*everything that goes out of the borders dont show*/
+  object-fit: cover;
+
+}
+#slogs1{
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#slogs1{
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 15%;
+  margin-bottom: 10%;
+
+}
+#slogs3{
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 15%;
+  margin-bottom: 25%;
+  background-color: #111111;
+
+}
+#sbutton1{
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10%;
+
+}
+/**/
+#slogs2{
+  margin: auto;
+  text-align: center;
+  color: #e74c3c;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+#image1 img{
+  text-align: left;
+  margin: auto;
+}
+.aall{
+  margin-bottom: 15%;
+}
+
+@media(max-width: 900px){
+
+  .header{
+    min-height: 100vh;/*the height of the background is 75% of screen*/
+    width:100%;/*width is 100% of the screen*/
+    background-image:/*linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),*/url(Backgroundmainmobile.png);/*toning down image and source*/
+    background-position: center;/*image in center*/
+    background-size: cover;/*image fits and covers all available space*/
+    position: relative;/*more ajusting*/
+  /*the next two lines make the image not move with the page*/
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
+}
+.contactus{
+  margin-top: -3%;
+}
+#ppp {
+  text-align: center;
+  text-decoration: none;
+  list-style:none;
+
+}
